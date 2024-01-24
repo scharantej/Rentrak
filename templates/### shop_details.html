@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shop Details</title>
+</head>
+<body>
+<h1>Shop Details</h1>
+<p>Shop Name: {{ shop.name }}</p>
+<table border="1">
+<thead>
+<tr>
+<th>Month</th>
+<th>Rent Amount</th>
+<th>Rent Status</th>
+<th>Electricity Meter Reading</th>
+<th>Common Area Maintenance</th>
+</tr>
+</thead>
+<tbody>
+{% for rent in rents %}
+<tr>
+<td>{{ rent.month }}</td>
+<td>{{ rent.amount }}</td>
+<td>{{ rent.status }}</td>
+<td>{{ rent.electricity_meter_reading }}</td>
+<td>{{ rent.common_area_maintenance }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<br>
+<a href="/enter_meter_reading/{{ shop.id }}">Enter Meter Reading</a>
+<br>
+<a href="/common_area_maintenance/{{ shop.id }}">Common Area Maintenance</a>
+</body>
+</html>
+
+
