@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rent Tracker Dashboard</title>
+</head>
+<body>
+<h1>Dashboard</h1>
+<table>
+<thead>
+<tr>
+<th>Shop Name</th>
+<th>Rent Status</th>
+<th>Electricity Meter Reading</th>
+<th>Common Area Maintenance</th>
+</tr>
+</thead>
+<tbody>
+{% for shop in shops %}
+<tr>
+<td>{{ shop.name }}</td>
+<td>{{ shop.rent_status }}</td>
+<td>{{ shop.electricity_meter_reading }}</td>
+<td>{{ shop.common_area_maintenance }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
+
